@@ -11,13 +11,6 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <!-- ZIP Manifest fields -->
-        <Implementation-Version>${project.version}</Implementation-Version>
-        <!-- Must not change this because of the Directory -->
-        <Implementation-Title>${project.name}</Implementation-Title>
-        <Implementation-Vendor>Ronny Edler</Implementation-Vendor>
-        <Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
-        <Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
     </properties>
 
     <licenses>
@@ -53,7 +46,16 @@
                             <!-- Package format version - do not change -->
                             <Vaadin-Package-Version>1</Vaadin-Package-Version>
                             <Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-                            <Vaadin-Widgetsets></Vaadin-Widgetsets>
+                            <!-- ZIP Manifest fields -->
+                            <Implementation-Version>${project.version}</Implementation-Version>
+                            <!-- Must not change this because of the Directory -->
+                            <Implementation-Title>${project.name}</Implementation-Title>
+                            <Implementation-Vendor>Ronny Edler</Implementation-Vendor>
+                            <Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
+<!--                             <Vaadin-Widgetsets>org.vaadin.ronny.LinkerWidgetset</Vaadin-Widgetsets> -->
+                            <Vaadin-Widgetsets>none</Vaadin-Widgetsets>
+                            <Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
+
                         </manifestEntries>
                     </archive>
                 </configuration>
